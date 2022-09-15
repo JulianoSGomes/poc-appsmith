@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "Api2",
+    "name": "createOrder",
     "datasource": {
       "name": "teste",
       "pluginId": "google-sheets-plugin",
@@ -13,14 +13,14 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Page1",
+    "pageId": "newOrder",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -43,16 +43,16 @@
             "metodo",
             "img",
             "parcelas"
-          ],
-          "componentData": [],
-          "viewType": "component",
-          "jsonData": "[]"
+          ]
         },
         "queryFormat": {
           "data": "ROWS"
         },
         "range": {
-          "data": "A2:Z"
+          "data": ""
+        },
+        "rowObjects": {
+          "data": "{\n\t \"descricao\": {{Form1.data.decription}},\n\t \"total\": {{Form1.data.Total}},\n\t \"valor\": {{Form1.data.value}},\n\t \"parcelas\": {{Form1.data.totalInstallments}},\n\t \"parcela\": {{Form1.data.installment}},\n\t \"ano\": {{String(moment(moment()).year())}},\n\t \"mes\": {{String(moment(moment()).month() + 1)}},\n\t \"dia\": {{String(moment(moment()).date())}},\n\t \"metodo\": {{Form1.data.method}}\n}"
         },
         "sheetName": {
           "data": "Página1"
@@ -63,72 +63,42 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "EQ",
-                "key": "mes",
-                "value": "{{monthField.selectedOptionValue}}"
-              },
-              {
-                "key": "ano",
-                "condition": "EQ",
-                "value": "{{yearField.selectedOptionValue}}"
-              }
-            ]
-          },
-          "componentData": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "GT",
-                "key": "",
-                "value": "{{ new Date(2022-09-01)}}"
-              }
-            ]
-          },
-          "viewType": "component",
-          "jsonData": "{\n\t\"condition\": \"AND\",\n\t\"children\": [\n\t\t{\n\t\t\t\"condition\": \"LT\",\n\t\t\t\"value\": \"{{}}\"\n\t\t}\n\t]\n}"
+            "condition": "AND"
+          }
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[0].value"
-      },
-      {
-        "key": "formData.where.data.children[1].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "",
-      "monthField.selectedOptionValue",
-      "new Date(2022-09-01)",
-      "yearField.selectedOptionValue"
+      "Form1.data.Total",
+      "Form1.data.decription",
+      "Form1.data.installment",
+      "Form1.data.method",
+      "Form1.data.totalInstallments",
+      "Form1.data.value",
+      "String(moment(moment()).date())",
+      "String(moment(moment()).month() + 1)",
+      "String(moment(moment()).year())"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Api2",
+  "id": "newOrder_createOrder",
   "deleted": false,
-  "gitSyncId": "63224f3415fcab3301bd9d4b_6322505d15fcab3301bd9d79"
+  "gitSyncId": "63224f3415fcab3301bd9d4b_6322964315fcab3301bd9f90"
 }

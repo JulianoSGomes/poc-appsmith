@@ -333,7 +333,7 @@
               },
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
               "widgetName": "List1",
-              "listData": "{{Api2.data}}",
+              "listData": "{{LoadOrders.data}}",
               "isCanvas": true,
               "displayName": "List",
               "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
@@ -1020,7 +1020,7 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "onOptionChange": "{{Api2.run()}}"
+              "onOptionChange": "{{LoadOrders.run()}}"
             },
             {
               "widgetName": "Text5",
@@ -1041,7 +1041,7 @@
               "fontFamily": "Montserrat",
               "parentColumnSpace": 6.84375,
               "dynamicTriggerPathList": [],
-              "leftColumn": 0,
+              "leftColumn": 5,
               "dynamicBindingPathList": [
                 {
                   "key": "borderRadius"
@@ -1052,10 +1052,10 @@
               ],
               "shouldTruncate": false,
               "truncateButtonColor": "#FFC13D",
-              "text": "{{\n\nApi2.data.reduce((acc, cur) => acc + cur.valor, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}\n\n",
+              "text": "{{\n\nLoadOrders.data.reduce((acc, cur) => acc + cur.valor, 0).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}}\n\n",
               "key": "e0hfrmdtpb",
               "isDeprecated": false,
-              "rightColumn": 64,
+              "rightColumn": 53,
               "textAlign": "CENTER",
               "widgetId": "dspgqes6k7",
               "isVisible": true,
@@ -1123,15 +1123,61 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "onOptionChange": "{{Api2.run()}}"
+              "onOptionChange": "{{LoadOrders.run()}}"
+            },
+            {
+              "boxShadow": "none",
+              "widgetName": "IconButton1",
+              "onClick": "{{navigateTo('newOrder', {})}}",
+              "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+              "displayName": "Icon Button",
+              "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+              "searchTags": [
+                "click",
+                "submit"
+              ],
+              "topRow": 1,
+              "bottomRow": 5,
+              "parentRowSpace": 10,
+              "type": "ICON_BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onClick"
+                }
+              ],
+              "leftColumn": 55,
+              "dynamicBindingPathList": [
+                {
+                  "key": "buttonColor"
+                },
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "isDisabled": false,
+              "key": "1ortqwbnbf",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "iconName": "plus",
+              "widgetId": "q1xo0i1c3h",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "buttonVariant": "PRIMARY"
             }
           ]
         },
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_Api2",
-              "name": "Api2",
+              "id": "Page1_LoadOrders",
+              "name": "LoadOrders",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
