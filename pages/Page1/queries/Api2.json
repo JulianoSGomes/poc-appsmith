@@ -105,7 +105,7 @@
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "formData.where.data.children[0].value"
@@ -123,7 +123,7 @@
       "new Date(2022-09-01)",
       "yearField.selectedOptionValue"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []

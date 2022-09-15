@@ -368,9 +368,6 @@
                   "key": "template.total.text"
                 },
                 {
-                  "key": "listData"
-                },
-                {
                   "key": "template.installments.text"
                 },
                 {
@@ -399,6 +396,9 @@
                 },
                 {
                   "key": "template.Text6.text"
+                },
+                {
+                  "key": "listData"
                 }
               ],
               "gridType": "vertical",
@@ -985,7 +985,11 @@
               "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( (moment(moment()).month() + 1 ).toString()))(monthField.options, monthField.serverSideFiltering) }}",
               "animateLoading": true,
               "parentColumnSpace": 6.84375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "leftColumn": 0,
               "dynamicBindingPathList": [
                 {
@@ -1015,7 +1019,8 @@
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "onOptionChange": "{{Api2.run()}}"
             },
             {
               "widgetName": "Text5",
@@ -1083,7 +1088,11 @@
               "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( moment(moment()).year().toString()))(yearField.options, yearField.serverSideFiltering) }}",
               "animateLoading": true,
               "parentColumnSpace": 6.84375,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "leftColumn": 42,
               "dynamicBindingPathList": [
                 {
@@ -1113,27 +1122,12 @@
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "onOptionChange": "{{Api2.run()}}"
             }
           ]
         },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Page1_Api2",
-              "name": "Api2",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "",
-                "yearField.selectedOptionValue",
-                "monthField.selectedOptionValue",
-                "new Date(2022-09-01)"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
+        "layoutOnLoadActions": [],
         "validOnPageLoadActions": true,
         "id": "Page1",
         "deleted": false,
