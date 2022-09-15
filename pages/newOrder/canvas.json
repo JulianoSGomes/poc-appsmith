@@ -220,8 +220,8 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 18,
-                      "bottomRow": 22,
+                      "topRow": 21,
+                      "bottomRow": 25,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "autoFocus": false,
@@ -325,8 +325,8 @@
                       "searchTags": [
                         "dropdown"
                       ],
-                      "topRow": 24,
-                      "bottomRow": 28,
+                      "topRow": 30,
+                      "bottomRow": 34,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "type": "SELECT_WIDGET",
@@ -380,8 +380,8 @@
                       "searchTags": [
                         "dropdown"
                       ],
-                      "topRow": 24,
-                      "bottomRow": 28,
+                      "topRow": 30,
+                      "bottomRow": 34,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "type": "SELECT_WIDGET",
@@ -391,7 +391,7 @@
                       "animateLoading": true,
                       "parentColumnSpace": 6.53125,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 26,
+                      "leftColumn": 28,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -411,7 +411,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 46,
+                      "rightColumn": 48,
                       "widgetId": "3u5xo37cvv",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -431,8 +431,8 @@
                         "paragraph",
                         "label"
                       ],
-                      "topRow": 26,
-                      "bottomRow": 30,
+                      "topRow": 32,
+                      "bottomRow": 36,
                       "parentRowSpace": 10,
                       "type": "TEXT_WIDGET",
                       "hideCard": false,
@@ -441,7 +441,7 @@
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "parentColumnSpace": 6.53125,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 47,
+                      "leftColumn": 48,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -458,7 +458,7 @@
                       "text": "{{Number(totalInstallments.selectedOptionValue) * value.text}}",
                       "key": "syuywz0wk5",
                       "isDeprecated": false,
-                      "rightColumn": 63,
+                      "rightColumn": 64,
                       "textAlign": "CENTER",
                       "widgetId": "ghk1u71826",
                       "isVisible": true,
@@ -481,14 +481,14 @@
                       "searchTags": [
                         "dropdown"
                       ],
-                      "topRow": 32,
-                      "bottomRow": 36,
+                      "topRow": 39,
+                      "bottomRow": 43,
                       "parentRowSpace": 10,
                       "labelWidth": 5,
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( `Dinheiro`))(method.options, method.serverSideFiltering) }}",
                       "animateLoading": true,
                       "parentColumnSpace": 6.53125,
                       "dynamicTriggerPathList": [],
@@ -499,23 +499,13 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultOptionValue"
                         }
                       ],
                       "labelPosition": "Top",
-                      "options": [
-                        {
-                          "label": "Blue",
-                          "value": "BLUE"
-                        },
-                        {
-                          "label": "Green",
-                          "value": "GREEN"
-                        },
-                        {
-                          "label": "Red",
-                          "value": "RED"
-                        }
-                      ],
+                      "options": "[\n  {\n    \"label\": \"cartao nubank\",\n    \"value\": \"cartao nubank\"\n  },\n  {\n    \"label\": \"Bradesco\",\n    \"value\": \"Bradesco\"\n  },\n  {\n    \"label\": \"Dinheiro\",\n    \"value\": \"Dinheiro\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
                       "key": "v0tmqhpmj1",

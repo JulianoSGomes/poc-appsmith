@@ -20,7 +20,7 @@
       "encodeParamsToggle": true,
       "formData": {
         "command": {
-          "data": "INSERT_ONE"
+          "data": "INSERT_MANY"
         },
         "entityType": {
           "data": "ROWS"
@@ -52,7 +52,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{\n\t \"descricao\": {{Form1.data.decription}},\n\t \"total\": {{Form1.data.Total}},\n\t \"valor\": {{Form1.data.value}},\n\t \"parcelas\": {{Form1.data.totalInstallments}},\n\t \"parcela\": {{Form1.data.installment}},\n\t \"ano\": {{String(moment(moment()).year())}},\n\t \"mes\": {{String(moment(moment()).month() + 1)}},\n\t \"dia\": {{String(moment(moment()).date())}},\n\t \"metodo\": {{Form1.data.method}}\n}"
+          "data": "{{Array(Number(Form1.data.totalInstallments)).fill(0).map((x, y) => (\n{\n\t \"descricao\": Form1.data.decription,\n\t \"total\": Form1.data.Total,\n\t \"valor\": Form1.data.value,\n\t \"parcelas\": Form1.data.totalInstallments,\n\t \"parcela\": y + 1,\n\t \"ano\": String(moment(moment()).year()),\n\t \"mes\": String(moment(moment()).month() + 1 + y),\n\t \"dia\": String(moment(moment()).date()),\n\t \"metodo\": Form1.data.method\n}\n))\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t}}\n"
         },
         "sheetName": {
           "data": "Página1"
@@ -83,15 +83,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Form1.data.Total",
-      "Form1.data.decription",
-      "Form1.data.installment",
-      "Form1.data.method",
-      "Form1.data.totalInstallments",
-      "Form1.data.value",
-      "String(moment(moment()).date())",
-      "String(moment(moment()).month() + 1)",
-      "String(moment(moment()).year())"
+      "Array(Number(Form1.data.totalInstallments)).fill(0).map((x, y) => (\n{\n\t \"descricao\": Form1.data.decription,\n\t \"total\": Form1.data.Total,\n\t \"valor\": Form1.data.value,\n\t \"parcelas\": Form1.data.totalInstallments,\n\t \"parcela\": y + 1,\n\t \"ano\": String(moment(moment()).year()),\n\t \"mes\": String(moment(moment()).month() + 1 + y),\n\t \"dia\": String(moment(moment()).date()),\n\t \"metodo\": Form1.data.method\n}\n))"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
