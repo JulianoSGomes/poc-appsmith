@@ -1127,7 +1127,23 @@
             }
           ]
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_Api2",
+              "name": "Api2",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "",
+                "yearField.selectedOptionValue",
+                "monthField.selectedOptionValue",
+                "new Date(2022-09-01)"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "validOnPageLoadActions": true,
         "id": "Page1",
         "deleted": false,
