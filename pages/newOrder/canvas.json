@@ -90,7 +90,7 @@
                       "overflow": "NONE",
                       "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 1,
+                      "leftColumn": 7,
                       "dynamicBindingPathList": [
                         {
                           "key": "fontFamily"
@@ -104,7 +104,7 @@
                       "text": "Adicionar Compra",
                       "key": "syuywz0wk5",
                       "isDeprecated": false,
-                      "rightColumn": 63,
+                      "rightColumn": 59,
                       "textAlign": "CENTER",
                       "widgetId": "jokpwhi4g1",
                       "isVisible": true,
@@ -220,10 +220,10 @@
                         "number",
                         "textarea"
                       ],
-                      "topRow": 21,
-                      "bottomRow": 25,
+                      "topRow": 33,
+                      "bottomRow": 37,
                       "parentRowSpace": 10,
-                      "labelWidth": 5,
+                      "labelWidth": "12",
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
                       "hideCard": false,
@@ -238,11 +238,14 @@
                         },
                         {
                           "key": "borderRadius"
+                        },
+                        {
+                          "key": "defaultText"
                         }
                       ],
-                      "labelPosition": "Top",
+                      "labelPosition": "Left",
                       "labelStyle": "",
-                      "inputType": "TEXT",
+                      "inputType": "NUMBER",
                       "isDisabled": false,
                       "key": "4e44uxv0d9",
                       "labelTextSize": "0.875rem",
@@ -260,7 +263,7 @@
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "iconAlign": "left",
-                      "defaultText": ""
+                      "defaultText": "{{Number(total.text) / Number(totalInstallments.selectedOptionValue)}}"
                     },
                     {
                       "boxShadow": "none",
@@ -276,7 +279,7 @@
                       "topRow": 12,
                       "bottomRow": 16,
                       "parentRowSpace": 10,
-                      "labelWidth": 5,
+                      "labelWidth": "12",
                       "autoFocus": false,
                       "type": "INPUT_WIDGET_V2",
                       "hideCard": false,
@@ -293,7 +296,7 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "labelPosition": "Top",
+                      "labelPosition": "Left",
                       "labelStyle": "",
                       "inputType": "TEXT",
                       "isDisabled": false,
@@ -325,10 +328,10 @@
                       "searchTags": [
                         "dropdown"
                       ],
-                      "topRow": 30,
-                      "bottomRow": 34,
+                      "topRow": 40,
+                      "bottomRow": 44,
                       "parentRowSpace": 10,
-                      "labelWidth": 5,
+                      "labelWidth": "12",
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
@@ -351,7 +354,7 @@
                           "key": "defaultOptionValue"
                         }
                       ],
-                      "labelPosition": "Top",
+                      "labelPosition": "Left",
                       "options": "{{Array(999).fill(0).map((x, y) => ({\"label\": String(x + y), \"value\": String(x + y)}))}}\n",
                       "placeholderText": "Select option",
                       "isDisabled": false,
@@ -359,7 +362,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 25,
+                      "rightColumn": 63,
                       "widgetId": "cgefe3ukzl",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -380,10 +383,10 @@
                       "searchTags": [
                         "dropdown"
                       ],
-                      "topRow": 30,
-                      "bottomRow": 34,
+                      "topRow": 47,
+                      "bottomRow": 51,
                       "parentRowSpace": 10,
-                      "labelWidth": 5,
+                      "labelWidth": "12",
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
@@ -391,7 +394,7 @@
                       "animateLoading": true,
                       "parentColumnSpace": 6.53125,
                       "dynamicTriggerPathList": [],
-                      "leftColumn": 28,
+                      "leftColumn": 0,
                       "dynamicBindingPathList": [
                         {
                           "key": "accentColor"
@@ -403,7 +406,7 @@
                           "key": "options"
                         }
                       ],
-                      "labelPosition": "Top",
+                      "labelPosition": "Left",
                       "options": "{{Array(Number(totalInstallments.selectedOptionValue)).fill(1).map((x, y) => ({\"label\": String(x + y), \"value\": String(x + y)}))}}\n",
                       "placeholderText": "Select option",
                       "isDisabled": false,
@@ -411,7 +414,7 @@
                       "labelTextSize": "0.875rem",
                       "isRequired": false,
                       "isDeprecated": false,
-                      "rightColumn": 48,
+                      "rightColumn": 63,
                       "widgetId": "3u5xo37cvv",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
                       "isVisible": true,
@@ -423,68 +426,19 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
                     },
                     {
-                      "widgetName": "Total",
-                      "displayName": "Text",
-                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
-                      "searchTags": [
-                        "typography",
-                        "paragraph",
-                        "label"
-                      ],
-                      "topRow": 32,
-                      "bottomRow": 36,
-                      "parentRowSpace": 10,
-                      "type": "TEXT_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "overflow": "NONE",
-                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-                      "parentColumnSpace": 6.53125,
-                      "dynamicTriggerPathList": [],
-                      "leftColumn": 48,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "fontFamily"
-                        },
-                        {
-                          "key": "borderRadius"
-                        },
-                        {
-                          "key": "text"
-                        }
-                      ],
-                      "shouldTruncate": false,
-                      "truncateButtonColor": "#FFC13D",
-                      "text": "{{Number(totalInstallments.selectedOptionValue) * value.text}}",
-                      "key": "syuywz0wk5",
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "textAlign": "CENTER",
-                      "widgetId": "ghk1u71826",
-                      "isVisible": true,
-                      "fontStyle": "BOLD",
-                      "textColor": "#231F20",
-                      "version": 1,
-                      "parentId": "sj7czgllo2",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "fontSize": "1rem"
-                    },
-                    {
                       "boxShadow": "none",
                       "widgetName": "method",
-                      "isFilterable": true,
+                      "isFilterable": false,
                       "displayName": "Select",
                       "iconSVG": "/static/media/icon.bd99caba5853ad71e4b3d8daffacb3a2.svg",
                       "labelText": "Método",
                       "searchTags": [
                         "dropdown"
                       ],
-                      "topRow": 39,
-                      "bottomRow": 43,
+                      "topRow": 19,
+                      "bottomRow": 23,
                       "parentRowSpace": 10,
-                      "labelWidth": 5,
+                      "labelWidth": "12",
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
@@ -504,7 +458,7 @@
                           "key": "defaultOptionValue"
                         }
                       ],
-                      "labelPosition": "Top",
+                      "labelPosition": "Left",
                       "options": "[\n  {\n    \"label\": \"cartao nubank\",\n    \"value\": \"cartao nubank\"\n  },\n  {\n    \"label\": \"Bradesco\",\n    \"value\": \"Bradesco\"\n  },\n  {\n    \"label\": \"Dinheiro\",\n    \"value\": \"Dinheiro\"\n  }\n]",
                       "placeholderText": "Select option",
                       "isDisabled": false,
@@ -522,6 +476,108 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "IconButton1",
+                      "onClick": "{{navigateTo('Page1', {})}}",
+                      "buttonColor": "#18181b",
+                      "displayName": "Icon Button",
+                      "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+                      "searchTags": [
+                        "click",
+                        "submit"
+                      ],
+                      "topRow": 3,
+                      "bottomRow": 7,
+                      "parentRowSpace": 10,
+                      "type": "ICON_BUTTON_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.53125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "isDisabled": false,
+                      "key": "a84d4oz6mc",
+                      "isDeprecated": false,
+                      "rightColumn": 6,
+                      "iconName": "arrow-left",
+                      "widgetId": "21b12jogmv",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "sj7czgllo2",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "buttonVariant": "TERTIARY"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "total",
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Input",
+                      "iconSVG": "/static/media/icon.9f505595da61a34f563dba82adeb06ec.svg",
+                      "searchTags": [
+                        "form",
+                        "text input",
+                        "number",
+                        "textarea"
+                      ],
+                      "topRow": 26,
+                      "bottomRow": 30,
+                      "parentRowSpace": 10,
+                      "labelWidth": "12",
+                      "autoFocus": false,
+                      "type": "INPUT_WIDGET_V2",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 6.53125,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onTextChanged"
+                        }
+                      ],
+                      "resetOnSubmit": true,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "accentColor"
+                        },
+                        {
+                          "key": "borderRadius"
+                        }
+                      ],
+                      "labelPosition": "Left",
+                      "labelStyle": "",
+                      "inputType": "NUMBER",
+                      "isDisabled": false,
+                      "key": "lkf99wctk4",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "onTextChanged": "{{JSObject1.calculeValue()}}",
+                      "isDeprecated": false,
+                      "rightColumn": 63,
+                      "widgetId": "4lm2jga640",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "label": "Total",
+                      "version": 2,
+                      "parentId": "sj7czgllo2",
+                      "labelAlignment": "left",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "iconAlign": "left",
+                      "defaultText": ""
                     }
                   ],
                   "key": "j2b3h023vd",

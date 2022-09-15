@@ -42,7 +42,8 @@
             "dia",
             "metodo",
             "img",
-            "parcelas"
+            "parcelas",
+            "pago"
           ],
           "componentData": [],
           "viewType": "component",
